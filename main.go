@@ -16,6 +16,11 @@ func CheckPasswordHash(password, hash string) bool {
 	return err == nil
 }
 
+func checkHashedPassword(password, hash string) bool {
+	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
+	return err == nil
+}
+
 func main() {
 	var password string
 	fmt.Println("Your Password should not contain any spaces")
