@@ -28,6 +28,9 @@ func main() {
 
 	match := CheckPasswordHash(password, hash)
 	fmt.Println("Match:   ", match)
+
+	fmt.Println("decrypt", hash)
+
 }
 
 // Decryption of hashed password algorithm is comming soon....
